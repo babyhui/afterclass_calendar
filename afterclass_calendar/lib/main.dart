@@ -42,9 +42,11 @@ class _BottomNavigationControllerState
       bottomNavigationBar: BottomNavigationBar(
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(icon: Icon(Icons.home), title: Text('首頁')),
-          BottomNavigationBarItem(icon: Icon(Icons.calendar_today), title: Text('行事曆')),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.calendar_today), title: Text('行事曆')),
           BottomNavigationBarItem(icon: Icon(Icons.chat), title: Text('聊天室')),
-          BottomNavigationBarItem(icon: Icon(Icons.business_center), title: Text('管理')),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.business_center), title: Text('管理')),
           BottomNavigationBarItem(
               icon: Icon(Icons.account_circle), title: Text('個人資料')),
         ],
