@@ -1,4 +1,5 @@
 import 'package:afterclass_calendar/page/club_detail.dart';
+import 'package:afterclass_calendar/page/club_search.dart';
 import 'package:flutter/material.dart';
 import '../club_service/club_http.dart';
 import '../club_service/club_model.dart';
@@ -11,17 +12,17 @@ class Club extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text("社團"),
-        // actions: [
-        //   IconButton(
-        //     icon: Icon(Icons.search),
-        //     onPressed: () {
-        //       showSearch(
-        //         context: context,
-        //         delegate: SearchClub(),
-        //       );
-        //     },
-        //   ),
-        // ],
+        actions: [
+          IconButton(
+            icon: Icon(Icons.search),
+            onPressed: () {
+              showSearch(
+                context: context,
+                delegate: ClubSearch(),
+              );
+            },
+          ),
+        ],
       ),
       body: FutureBuilder(
         future: clubhttp.getClubPost(),
