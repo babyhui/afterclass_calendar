@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:afterclass_calendar/page/home.dart';
 import 'package:afterclass_calendar/page/calendar.dart';
-import 'package:afterclass_calendar/page/massenge.dart';
+import 'package:afterclass_calendar/page/club.dart';
 import 'package:afterclass_calendar/page/manage.dart';
 import 'package:afterclass_calendar/page/account.dart';
 
@@ -30,7 +30,7 @@ class _BottomNavigationControllerState
     extends State<BottomNavigationController> {
   //目前選擇頁索引值
   int _currentIndex = 0; //預設值
-  final pages = [Home(), Calendar(), Massenge(), Manage(), Account()];
+  final pages = [Home(), Calendar(), Club(), Manage(), Account()];
 
   @override
   Widget build(BuildContext context) {
@@ -44,7 +44,7 @@ class _BottomNavigationControllerState
           BottomNavigationBarItem(icon: Icon(Icons.home), title: Text('首頁')),
           BottomNavigationBarItem(
               icon: Icon(Icons.calendar_today), title: Text('行事曆')),
-          BottomNavigationBarItem(icon: Icon(Icons.chat), title: Text('聊天室')),
+          BottomNavigationBarItem(icon: Icon(Icons.chat), title: Text('社團')),
           BottomNavigationBarItem(
               icon: Icon(Icons.business_center), title: Text('管理')),
           BottomNavigationBarItem(
