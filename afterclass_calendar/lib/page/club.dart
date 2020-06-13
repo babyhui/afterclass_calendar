@@ -53,8 +53,9 @@ class Club extends StatelessWidget {
                       ))
                   .toList(),
             );
+          } else {
+            return CircularProgressIndicator();
           }
-          return CircularProgressIndicator();
         },
       ),
     );

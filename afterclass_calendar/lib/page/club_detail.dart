@@ -12,7 +12,6 @@ class ClubDetail extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print(post.logo); ////////////
     return Scaffold(
       appBar: AppBar(
         title: Text(post.name),

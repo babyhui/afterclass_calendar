@@ -1,6 +1,7 @@
+import 'package:afterclass_calendar/page/activity_detail.dart';
 import 'package:flutter/material.dart';
 
-class Home extends StatelessWidget {
+class Activity extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -46,10 +47,11 @@ var aasd = ListTile(
       Column(
         children: <Widget>[
           FlatButton(
+              onPressed: () {},
               child: Image.asset(
-            'images/unnamed.jpg',
-            width: 130,
-          )),
+                'images/unnamed.jpg',
+                width: 130,
+              )),
           Text("data")
         ],
       ),

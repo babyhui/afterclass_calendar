@@ -4,6 +4,9 @@ class Account extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text('個人資料'),
+      ),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(12.0),
@@ -34,12 +37,27 @@ class Account extends StatelessWidget {
                 title: Text("社團"),
                 children: <Widget>[
                   ListTile(
+                    leading: CircleAvatar(
+                      backgroundImage: AssetImage(
+                        "images/圖片顯示中.jpg",
+                      ),
+                    ),
                     title: Text("逢甲大學 iOS Club 志工隊"),
                   ),
                   ListTile(
+                    leading: CircleAvatar(
+                      backgroundImage: AssetImage(
+                        "images/圖片顯示中.jpg",
+                      ),
+                    ),
                     title: Text("熱門音樂社"),
                   ),
                   ListTile(
+                    leading: CircleAvatar(
+                      backgroundImage: AssetImage(
+                        "images/圖片顯示中.jpg",
+                      ),
+                    ),
                     title: Text("琴韻吉他社"),
                   ),
                 ],

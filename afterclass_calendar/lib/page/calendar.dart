@@ -23,7 +23,11 @@ class Calendar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TableCalendar(
+      locale: 'zh_CN',
       calendarController: _calendarController,
     );
   }
 }
+
+//https://pub.dev/packages/table_calendar
+//https://github.com/aleksanderwozniak/table_calendar/tree/master/example

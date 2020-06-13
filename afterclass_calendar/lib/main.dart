@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:afterclass_calendar/page/home.dart';
+import 'package:afterclass_calendar/page/activity.dart';
 import 'package:afterclass_calendar/page/calendar.dart';
 import 'package:afterclass_calendar/page/club.dart';
 import 'package:afterclass_calendar/page/manage.dart';
@@ -11,6 +11,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme:
+          ThemeData(primarySwatch: Colors.red, primaryColor: Colors.red[900]),
+      // debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: BottomNavigationController(),
       ),
@@ -30,14 +33,14 @@ class _BottomNavigationControllerState
     extends State<BottomNavigationController> {
   //目前選擇頁索引值
   int _currentIndex = 0; //預設值
-  final pages = [Home(), Calendar(), Club(), Manage(), Account()];
+  final pages = [Activity(), Calendar(), Club(), Manage(), Account()];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('課外活動行事曆'),
-      ),
+      // appBar: AppBar(
+      //   title: Text('課外活動行事曆'),
+      // ),
       body: pages[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         items: <BottomNavigationBarItem>[
