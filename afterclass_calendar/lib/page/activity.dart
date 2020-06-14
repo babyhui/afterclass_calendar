@@ -6,11 +6,13 @@ class Activity extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("社團"),
+        title: Text("活動"),
       ),
       body: GridView(
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
+          mainAxisSpacing: 10,
+          crossAxisSpacing: 0,
         ),
         children: <Widget>[
           Column(

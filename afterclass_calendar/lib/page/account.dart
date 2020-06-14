@@ -43,6 +43,7 @@ class Account extends StatelessWidget {
                       ),
                     ),
                     title: Text("逢甲大學 iOS Club 志工隊"),
+                    onTap: () {},
                   ),
                   ListTile(
                     leading: CircleAvatar(
@@ -51,6 +52,7 @@ class Account extends StatelessWidget {
                       ),
                     ),
                     title: Text("熱門音樂社"),
+                    onTap: () {},
                   ),
                   ListTile(
                     leading: CircleAvatar(
@@ -59,6 +61,7 @@ class Account extends StatelessWidget {
                       ),
                     ),
                     title: Text("琴韻吉他社"),
+                    onTap: () {},
                   ),
                 ],
               ),

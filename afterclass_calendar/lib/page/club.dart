@@ -32,29 +32,30 @@ class Club extends StatelessWidget {
             List<ClubPost> posts = snapshot.data;
             return ListView(
               children: posts
-                  .map((ClubPost post) => ListTile(
-                        leading: CircleAvatar(
-                          backgroundImage: post.logo != null
-                              ? NetworkImage(post.logo)
-                              : AssetImage(
-                                  "images/圖片顯示中.jpg",
-                                ),
-                        ),
-                        title: Text(post.name),
-                        subtitle: Text(
-                          post.id.toString(),
-                        ),
-                        trailing: Icon(Icons.keyboard_arrow_right),
-                        onTap: () =>
-                            Navigator.of(context).push(MaterialPageRoute(
-                                builder: (context) => ClubDetail(
-                                      post: post,
-                                    ))),
-                      ))
+                  .map(
+                    (ClubPost post) => ListTile(
+                      leading: CircleAvatar(
+                        backgroundImage: post.logo != null
+                            ? NetworkImage(post.logo)
+                            : AssetImage(
+                                "images/圖片顯示中.jpg",
+                              ),
+                      ),
+                      title: Text(post.name),
+                      subtitle: Text(
+                        post.id.toString(),
+                      ),
+                      trailing: Icon(Icons.keyboard_arrow_right),
+                      onTap: () => Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => ClubDetail(
+                                post: post,
+                              ))),
+                    ),
+                  )
                   .toList(),
             );
           } else {
-            return CircularProgressIndicator();
+            return Center(child: CircularProgressIndicator());
           }
         },
       ),
