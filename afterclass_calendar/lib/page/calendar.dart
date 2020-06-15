@@ -23,7 +23,7 @@ class Calendar extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blueGrey,
       ),
-      home: Scaffold(body:MyHomePage(title: ''),) ,
+      home: Scaffold(body:MyHomePage(title: '行事曆'),) ,
     );
   }
 }

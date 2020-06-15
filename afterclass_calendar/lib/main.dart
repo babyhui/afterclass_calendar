@@ -34,7 +34,7 @@ class _BottomNavigationControllerState
     extends State<BottomNavigationController> {
   //目前選擇頁索引值
   int _currentIndex = 0; //預設值
-  final pages = [Activity(), Calendar(), Club(), Manage(), Account()];
+  final pages = [Calendar(), Activity(), Club(), Manage(), Account()];
 
   @override
   Widget build(BuildContext context) {
@@ -45,9 +45,10 @@ class _BottomNavigationControllerState
       body: pages[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         items: <BottomNavigationBarItem>[
-          BottomNavigationBarItem(icon: Icon(Icons.home), title: Text('首頁')),
-          BottomNavigationBarItem(
+        BottomNavigationBarItem(
               icon: Icon(Icons.calendar_today), title: Text('行事曆')),
+          
+          BottomNavigationBarItem(icon: Icon(Icons.terrain), title: Text("活動資訊")),
           BottomNavigationBarItem(icon: Icon(Icons.format_list_bulleted), title: Text('社團')),
           BottomNavigationBarItem(
               icon: Icon(Icons.business_center), title: Text('管理')),
