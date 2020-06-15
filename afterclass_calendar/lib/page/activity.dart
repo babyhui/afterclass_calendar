@@ -24,19 +24,20 @@ class Activity extends StatelessWidget {
           ),
         ],
       ),
-      body:  FutureBuilder(
+      body: FutureBuilder(
         future: activityhttp.getActivityPost(),
         builder:
             (BuildContext context, AsyncSnapshot<List<ActivityPost>> snapshot) {
           if (snapshot.hasData) {
             List<ActivityPost> posts = snapshot.data;
             return GridView(
-                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 2,
-          // mainAxisSpacing: 10,
-          crossAxisSpacing: 0,
-          // childAspectRatio: 1,
-        ),
+              padding: EdgeInsets.fromLTRB(0, 30, 0, 15),
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2,
+                mainAxisSpacing: 10,
+                crossAxisSpacing: 0,
+                // childAspectRatio: 1,
+              ),
               children: posts
                   .map(
                     (ActivityPost post) => Column(
@@ -48,12 +49,14 @@ class Activity extends StatelessWidget {
                           ),
                           onPressed: () {
                             Navigator.of(context).push(MaterialPageRoute(
-                                builder: (context) => ActivityDetail(post: post,)));
+                                builder: (context) => ActivityDetail(
+                                      post: post,
+                                    )));
                           },
                         ),
                         Text(post.name)
                       ],
-                    ),          
+                    ),
                   )
                   .toList(),
             );
@@ -65,9 +68,6 @@ class Activity extends StatelessWidget {
     );
   }
 }
-
-
-
 
 // GridView(
 //         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
@@ -90,12 +90,10 @@ class Activity extends StatelessWidget {
 //               ),
 //               Text("data")
 //             ],
-//           ),          
-          
+//           ),
+
 //         ],
 //       ),
-
-
 
 // class Activity extends StatelessWidget {
 //   @override
