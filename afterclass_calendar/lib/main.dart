@@ -12,9 +12,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme:
-          ThemeData(primarySwatch: Colors.red, primaryColor: Colors.blueGrey),
+          ThemeData(primarySwatch: Colors.red, primaryColor: Colors.blueGrey, ),
       // debugShowCheckedModeBanner: false,
       home: Scaffold(
+       
         body: BottomNavigationController(),
       ),
     );
@@ -54,8 +55,8 @@ class _BottomNavigationControllerState
               icon: Icon(Icons.account_circle), title: Text('個人資料')),
         ],
         currentIndex: _currentIndex, //目前選擇頁索引值
-        selectedItemColor: Colors.lightBlue[400], //選擇頁顏色
-        unselectedItemColor: Colors.lightBlue[800],
+        selectedItemColor: Colors.blue[900], //選擇頁顏色
+        unselectedItemColor: Colors.blue[300],
         onTap: _onItemClick, //BottomNavigationBar 按下處理事件
       ),
     );
@@ -68,99 +69,3 @@ class _BottomNavigationControllerState
     });
   }
 }
-// import 'package:flutter/material.dart';
-
-// void main() => runApp(MyApp());
-
-// /// This Widget is the main application widget.
-// class MyApp extends StatelessWidget {
-//   static const String _title = 'Flutter Code Sample';
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return MaterialApp(
-//       title: _title,
-//       home: MyStatefulWidget(),
-//     );
-//   }
-// }
-
-// class MyStatefulWidget extends StatefulWidget {
-//   MyStatefulWidget({Key key}) : super(key: key);
-
-//   @override
-//   _MyStatefulWidgetState createState() => _MyStatefulWidgetState();
-// }
-
-// class _MyStatefulWidgetState extends State<MyStatefulWidget> {
-//   int _selectedIndex = 0;
-//   static const TextStyle optionStyle =
-//       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
-//   static const List<Widget> _widgetOptions = <Widget>[
-//     Text(
-//       'Index 0: Home',
-//       style: optionStyle,
-//     ),
-//     Text(
-//       'Index 1: Business',
-//       style: optionStyle,
-//     ),
-//     Text(
-//       'Index 2: School',
-//       style: optionStyle,
-//     ),
-//     Text(
-//       'Index 3: Alarm',
-//       style: optionStyle,
-//     ),
-//     Text(
-//       'Index 4: what',
-//       style: optionStyle,
-//     ),
-//   ];
-
-//   void _onItemTapped(int index) {
-//     setState(() {
-//       _selectedIndex = index;
-//     });
-//   }
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       appBar: AppBar(
-//         title: const Text('課外活動行事曆'),
-//       ),
-//       body: Center(
-//         child: _widgetOptions.elementAt(_selectedIndex),
-//       ),
-//       bottomNavigationBar: BottomNavigationBar(
-//         items: const <BottomNavigationBarItem>[
-//           BottomNavigationBarItem(
-//             icon: Icon(Icons.home),
-//             title: Text('Home'),
-//           ),
-//           BottomNavigationBarItem(
-//             icon: Icon(Icons.calendar_today),
-//             title: Text('Calendar'),
-//           ),
-//            BottomNavigationBarItem(
-//             icon: Icon(Icons.message),
-//             title: Text('Message'),
-//           ),
-//           BottomNavigationBarItem(
-//             icon: Icon(Icons.business_center),
-//             title: Text('Manage'),
-//           ),
-//          BottomNavigationBarItem(
-//             icon: Icon(Icons.account_circle),
-//             title: Text('Account'),
-//           ),
-//         ],
-//         currentIndex: _selectedIndex,
-//         selectedItemColor: Colors.amber[800],
-//         onTap: _onItemTapped,
-//       ),
-//     );
-//   }
-// }
