@@ -34,6 +34,9 @@ class Manage extends StatelessWidget {
                 onTap: () {},
               ),
               ListTile(
+                title: Text("社幹"),
+              ),
+              ListTile(
                 leading: CircleAvatar(
                   backgroundImage: AssetImage(
                     "images/圖片顯示中.jpg",
@@ -41,9 +44,6 @@ class Manage extends StatelessWidget {
                 ),
                 title: Text("琴韻吉他社"),
                 onTap: () {},
-              ),
-              ListTile(
-                title: Text("${DateTime.now()}"),
               ),
             ],
           ),
