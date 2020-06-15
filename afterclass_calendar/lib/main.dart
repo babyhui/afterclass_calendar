@@ -48,7 +48,7 @@ class _BottomNavigationControllerState
           BottomNavigationBarItem(icon: Icon(Icons.home), title: Text('首頁')),
           BottomNavigationBarItem(
               icon: Icon(Icons.calendar_today), title: Text('行事曆')),
-          BottomNavigationBarItem(icon: Icon(Icons.chat), title: Text('社團')),
+          BottomNavigationBarItem(icon: Icon(Icons.search), title: Text('社團')),
           BottomNavigationBarItem(
               icon: Icon(Icons.business_center), title: Text('管理')),
           BottomNavigationBarItem(
