@@ -54,7 +54,8 @@ class _BottomNavigationControllerState
               icon: Icon(Icons.account_circle), title: Text('個人資料')),
         ],
         currentIndex: _currentIndex, //目前選擇頁索引值
-        fixedColor: Colors.amber, //選擇頁顏色
+        selectedItemColor: Colors.amber, //選擇頁顏色
+        unselectedItemColor: Colors.grey[300],
         onTap: _onItemClick, //BottomNavigationBar 按下處理事件
       ),
     );

@@ -6,7 +6,7 @@ class ActivityPost {
   final DateTime time;
   final String location;
   final int fee;
-  final String ckubId;
+  final String clubId;
   final String url;
 
   ActivityPost({
@@ -15,7 +15,7 @@ class ActivityPost {
     @required this.time,
     @required this.location,
     @required this.fee,
-    @required this.ckubId,
+    @required this.clubId,
     @required this.url,
   });
 
@@ -26,7 +26,7 @@ class ActivityPost {
       time: json['time'] as DateTime,
       location: json['location'] as String,
       fee: json['fee'] as int,
-      ckubId: json['ckubId'] as String,
+      clubId: json['ckubId'] as String,
       url: json['url'] as String,
     );
   }
