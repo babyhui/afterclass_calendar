@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme:
-          ThemeData(primarySwatch: Colors.red, primaryColor: Colors.blueGrey[400]),
+          ThemeData(primarySwatch: Colors.red, primaryColor: Colors.blueGrey),
       // debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: BottomNavigationController(),
@@ -32,7 +32,7 @@ class BottomNavigationController extends StatefulWidget {
 class _BottomNavigationControllerState
     extends State<BottomNavigationController> {
   //目前選擇頁索引值
-  int _currentIndex = 1; //預設值
+  int _currentIndex = 0; //預設值
   final pages = [Activity(), Calendar(), Club(), Manage(), Account()];
 
   @override

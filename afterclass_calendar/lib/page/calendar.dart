@@ -21,9 +21,9 @@ class Calendar extends StatelessWidget {
     return MaterialApp(
       title: 'Table Calendar Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.blueGrey,
       ),
-      home: Scaffold(body:MyHomePage(title: 'Table Calendar Demo')) ,
+      home: Scaffold(body:MyHomePage(title: ''),) ,
     );
   }
 }
