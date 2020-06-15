@@ -3,7 +3,7 @@ import 'package:flutter/foundation.dart';
 class ActivityPost {
   final String id;
   final String name;
-  final DateTime time;
+  final String time;
   final String location;
   final int fee;
   final String clubId;
@@ -23,7 +23,7 @@ class ActivityPost {
     return ActivityPost(
       id: json['id'] as String,
       name: json['name'] as String,
-      time: json['time'] as DateTime,
+      time: json['time'] as String,
       location: json['location'] as String,
       fee: json['fee'] as int,
       clubId: json['ckubId'] as String,

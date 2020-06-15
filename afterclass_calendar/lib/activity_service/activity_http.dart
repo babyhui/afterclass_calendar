@@ -3,10 +3,10 @@ import 'package:http/http.dart';
 
 import 'activity_model.dart';
 
-class ClubHttp {
+class ActivityHttp {
   final String url = "http://140.134.79.128:40130/activity";
 
-  Future<List<ActivityPost>> getClubPost() async {
+  Future<List<ActivityPost>> getActivityPost() async {
     Response res = await get(url);
     if (res.statusCode == 200) {
       List<dynamic> body = jsonDecode(res.body);

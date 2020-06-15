@@ -1,12 +1,14 @@
+import 'package:afterclass_calendar/activity_service/activity_http.dart';
+import 'package:afterclass_calendar/activity_service/activity_model.dart';
 import 'package:flutter/material.dart';
 
 class ActivityDetail extends StatelessWidget {
-  // final ClubPost post;
-  // final ClubHttp clubHttp = ClubHttp();
+  final ActivityPost post;
+  final ActivityHttp clubHttp = ActivityHttp();
 
-  // ClubDetail({
-  //   @required this.post,
-  // });
+  ActivityDetail({
+    @required this.post,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -22,10 +24,10 @@ class ActivityDetail extends StatelessWidget {
               children: <Widget>[
                 ListTile(
                   title: Image.asset(
-                    "images/unnamed.jpg",
+                    "images/圖片顯示中.jpg",
                   ),
                 ),
-                ListTile(title: Text("data")),
+                ListTile(title: Text(post.name)),
               ],
             ),
           ),
