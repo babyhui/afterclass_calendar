@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
@@ -79,9 +81,17 @@ class Account extends StatelessWidget {
                 title: Text("設定"),
               ),
               RaisedButton(onPressed: () async {
+                var user = {'name': 'doodle', 'color': 'blue'};
+                var json = jsonEncode(user);
+
                 var url = 'http://140.134.79.128:40130/club';
-                var response = await http
-                    .post(url, body: {'name': 'doodle', 'color': 'blue'});
+                var response = await http.post(url,
+                    headers: {
+                      'Content-Type': 'application/json; charset=UTF-8'
+                    },
+                    body: json);
+                print('Response status: ${response.statusCode}');
+                print('Response body: ${response.body}');
               })
             ]),
           ),
