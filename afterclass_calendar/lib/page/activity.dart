@@ -45,7 +45,7 @@ class Activity extends StatelessWidget {
                         FlatButton(
                           child: Image.asset(
                             'images/unnamed.jpg',
-                            width: 130,
+                            width: 110,
                           ),
                           onPressed: () {
                             Navigator.of(context).push(MaterialPageRoute(

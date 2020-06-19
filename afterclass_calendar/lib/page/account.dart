@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
 
 class Account extends StatelessWidget {
   @override
@@ -77,6 +78,11 @@ class Account extends StatelessWidget {
                 leading: Icon(Icons.settings),
                 title: Text("設定"),
               ),
+              RaisedButton(onPressed: () async {
+                var url = 'http://140.134.79.128:40130/club';
+                var response = await http
+                    .post(url, body: {'name': 'doodle', 'color': 'blue'});
+              })
             ]),
           ),
         ),
