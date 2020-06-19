@@ -12,6 +12,18 @@ class ActivityDetail extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var location = "無";
+    var time = '為確認';
+    var fee = '0';
+    if (post.location != null) {
+      location = post.location;
+    }
+    if (post.time != null) {
+      time = post.time;
+    }
+    if (post.fee != null) {
+      fee = post.fee.toString();
+    }
     return Scaffold(
       appBar: AppBar(
         title: Text("活動"),
@@ -28,8 +40,11 @@ class ActivityDetail extends StatelessWidget {
                   ),
                 ),
                 ListTile(title: Text(post.name)),
+                ListTile(title: Text("地點：" + location)),
+                ListTile(title: Text("時間：" + time)),
+                ListTile(title: Text("費用:" + fee)),
                 RaisedButton(
-                  child:Text("我要報名"),
+                  child: Text("我要報名"),
                   onPressed: () {},
                 )
               ],
