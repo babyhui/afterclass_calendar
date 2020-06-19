@@ -271,7 +271,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
   }
 
   Widget _buildButtons() {
-    final dateTime = _events.keys.elementAt(_events.length - 2);
+    final dateTime = _events.keys.elementAt(_events.length -2);
 
     return Column(
       children: <Widget>[
@@ -279,30 +279,30 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
-            RaisedButton(
-              child: Text('Month'),
-              onPressed: () {
-                setState(() {
-                  _calendarController.setCalendarFormat(CalendarFormat.month);
-                });
-              },
-            ),
-            RaisedButton(
-              child: Text('2 weeks'),
-              onPressed: () {
-                setState(() {
-                  _calendarController.setCalendarFormat(CalendarFormat.twoWeeks);
-                });
-              },
-            ),
-            RaisedButton(
-              child: Text('Week'),
-              onPressed: () {
-                setState(() {
-                  _calendarController.setCalendarFormat(CalendarFormat.week);
-                });
-              },
-            ),
+            // RaisedButton(
+            //   child: Text('Month'),
+            //   onPressed: () {
+            //     setState(() {
+            //       _calendarController.setCalendarFormat(CalendarFormat.month);
+            //     });
+            //   },
+            // ),
+            // RaisedButton(
+            //   child: Text('2 weeks'),
+            //   onPressed: () {
+            //     setState(() {
+            //       _calendarController.setCalendarFormat(CalendarFormat.twoWeeks);
+            //     });
+            //   },
+            // ),
+            // RaisedButton(
+            //   child: Text('Week'),
+            //   onPressed: () {
+            //     setState(() {
+            //       _calendarController.setCalendarFormat(CalendarFormat.week);
+            //     });
+            //   },
+            // ),
           ],
         ),
         const SizedBox(height: 8.0),
