@@ -19,10 +19,10 @@ class ClubDetail extends StatelessWidget {
           IconButton(
             icon: Icon(Icons.favorite_border),
             onPressed: () {
-             // showSearch(
-               // context: context,
+              // showSearch(
+              // context: context,
               //  delegate: ActivitySearch(),
-             // );
+              // );
             },
           ),
         ],
