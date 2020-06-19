@@ -13,7 +13,7 @@ class ActivityDetail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var location = "無";
-    var time = '為確認';
+    var time = '未確認';
     var fee = '0';
     if (post.location != null) {
       location = post.location;
