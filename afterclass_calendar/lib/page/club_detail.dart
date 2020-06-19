@@ -15,6 +15,17 @@ class ClubDetail extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(post.name),
+        actions: [
+          IconButton(
+            icon: Icon(Icons.favorite_border),
+            onPressed: () {
+             // showSearch(
+               // context: context,
+              //  delegate: ActivitySearch(),
+             // );
+            },
+          ),
+        ],
       ),
       // floatingActionButton: FloatingActionButton(
       //   child: Icon(Icons.delete),

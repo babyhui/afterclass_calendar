@@ -28,6 +28,10 @@ class ActivityDetail extends StatelessWidget {
                   ),
                 ),
                 ListTile(title: Text(post.name)),
+                RaisedButton(
+                  child:Text("我要報名"),
+                  onPressed: () {},
+                )
               ],
             ),
           ),
