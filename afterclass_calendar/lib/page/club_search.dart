@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:afterclass_calendar/club_service/club_model.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
@@ -7,9 +9,16 @@ class ClubSearch extends SearchDelegate<ClubPost> {
   // ClubSearch(this.post);
 
   Future<String> sendData() async {
-      final response = await http.post("http://140.134.79.128:40130/club", 
-      body: {query});
-    }
+    var search = {'search': '$query'};
+    var json = jsonEncode(search);
+
+    var url = 'http://140.134.79.128:40130/club';
+    var response = await http.post(url,
+        headers: {'Content-Type': 'application/json; charset=UTF-8'},
+        body: json);
+    print('Response status: ${response.statusCode}');
+    print('Response body: ${response.body}');
+  }
 
   @override
   List<Widget> buildActions(BuildContext context) {
@@ -35,7 +44,7 @@ class ClubSearch extends SearchDelegate<ClubPost> {
   @override
   Widget buildResults(BuildContext context) {
     sendData();
-    
+
     return Container();
   }
 
