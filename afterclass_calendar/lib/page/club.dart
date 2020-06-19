@@ -9,6 +9,8 @@ final ClubHttp clubhttp = ClubHttp();
 class Club extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+  //    final bool alreadySaved = _saved.contains(pair);
+    bool alreadySaved = true; 
     return Scaffold(
       appBar: AppBar(
         title: Text("社團"),
@@ -33,6 +35,7 @@ class Club extends StatelessWidget {
             return ListView(
               children: posts
                   .map(
+                    
                     (ClubPost post) => ListTile(
                       leading: CircleAvatar(
                         backgroundImage: post.logo != null
@@ -45,7 +48,24 @@ class Club extends StatelessWidget {
                       subtitle: Text(
                         post.id.toString(),
                       ),
-                      trailing: Icon(Icons.keyboard_arrow_right),
+                    //  trailing: Icon(Icons.keyboard_arrow_right),
+                      // trailing: 
+                      // new Icon(
+                      //    alreadySaved ? Icons.favorite : Icons.favorite_border,
+                      //    color: alreadySaved ? Colors.red : null,
+                      // ),
+                      trailing: 
+                      new Icon(
+                         alreadySaved ? Icons.favorite : Icons.favorite_border,
+                         color: alreadySaved ? Colors.red : null,
+                      ),
+                      // trailing: [
+                      //   IconButton (
+                      //     icon: Icon(Icons.keyboard_arrow_right),
+                      //     onPressed: () {}
+
+                      //   ),
+                      // ]
                       onTap: () => Navigator.of(context).push(MaterialPageRoute(
                           builder: (context) => ClubDetail(
                                 post: post,

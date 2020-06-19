@@ -5,6 +5,8 @@ import 'package:flutter/material.dart';
 class ClubDetail extends StatelessWidget {
   final ClubPost post;
   final ClubHttp clubHttp = ClubHttp();
+//  final Set<WordPair> _saved = new Set<WordPair>(); 
+ 
 
   ClubDetail({
     @required this.post,
@@ -17,8 +19,9 @@ class ClubDetail extends StatelessWidget {
         title: Text(post.name),
         actions: [
           IconButton(
-            icon: Icon(Icons.favorite_border),
-            onPressed: () {
+              icon: Icon(Icons.favorite_border),
+              onPressed: () {
+              
              // showSearch(
                // context: context,
               //  delegate: ActivitySearch(),
@@ -26,6 +29,7 @@ class ClubDetail extends StatelessWidget {
             },
           ),
         ],
+        
       ),
       // floatingActionButton: FloatingActionButton(
       //   child: Icon(Icons.delete),
