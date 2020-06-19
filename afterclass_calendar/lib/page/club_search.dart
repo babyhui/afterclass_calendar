@@ -49,7 +49,7 @@ class ClubSearch extends SearchDelegate<ClubPost> {
 
   @override
   Widget buildResults(BuildContext context) {
-    sendData();
+    // sendData();
 
     return FutureBuilder(
       future: sendData(),
@@ -89,7 +89,7 @@ class ClubSearch extends SearchDelegate<ClubPost> {
 
   @override
   Widget buildSuggestions(BuildContext context) {
-    return Text(query);
+    return Container();
   }
 }
 
