@@ -1,6 +1,8 @@
 import 'dart:convert';
 
 import 'package:afterclass_calendar/club_service/club_model.dart';
+import 'package:afterclass_calendar/page/club.dart';
+import 'package:afterclass_calendar/page/club_detail.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
@@ -8,7 +10,7 @@ class ClubSearch extends SearchDelegate<ClubPost> {
   // final Stream<List<ClubPost>> post;
   // ClubSearch(this.post);
 
-  Future<String> sendData() async {
+  Future<List<ClubPost>> sendData() async {
     var search = {'search': '$query'};
     var json = jsonEncode(search);
 
@@ -18,6 +20,10 @@ class ClubSearch extends SearchDelegate<ClubPost> {
         body: json);
     print('Response status: ${response.statusCode}');
     print('Response body: ${response.body}');
+    List<dynamic> body = jsonDecode(response.body);
+    List<ClubPost> posts =
+        body.map((dynamic item) => ClubPost.fromJson(item)).toList();
+    return posts;
   }
 
   @override
@@ -45,7 +51,40 @@ class ClubSearch extends SearchDelegate<ClubPost> {
   Widget buildResults(BuildContext context) {
     sendData();
 
-    return Container();
+    return FutureBuilder(
+      future: sendData(),
+      builder: (BuildContext context, AsyncSnapshot<List<ClubPost>> snapshot) {
+        if (snapshot.hasData) {
+          List<ClubPost> posts = snapshot.data;
+          return ListView(
+            children: posts
+                .map(
+                  (ClubPost post) => ListTile(
+                    leading: CircleAvatar(
+                      backgroundImage: post.logo != null
+                          ? NetworkImage(post.logo)
+                          : AssetImage(
+                              "images/圖片顯示中.jpg",
+                            ),
+                    ),
+                    title: Text(post.name),
+                    subtitle: Text(
+                      post.id.toString(),
+                    ),
+                    trailing: Icon(Icons.keyboard_arrow_right),
+                    onTap: () => Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => ClubDetail(
+                              post: post,
+                            ))),
+                  ),
+                )
+                .toList(),
+          );
+        } else {
+          return Center(child: CircularProgressIndicator());
+        }
+      },
+    );
   }
 
   @override
