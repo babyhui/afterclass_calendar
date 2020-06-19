@@ -55,6 +55,7 @@ class ActivityAdd extends StatelessWidget {
                       'Content-Type': 'application/json; charset=UTF-8'
                     },
                     body: json);
+                Navigator.pop(context);
               },
             ),
           ],
