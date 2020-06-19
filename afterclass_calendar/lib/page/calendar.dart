@@ -271,7 +271,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
   }
 
   Widget _buildButtons() {
-    final dateTime = _events.keys.elementAt(_events.length -2);
+    final dateTime = _events.keys.elementAt(_events.length - 2);
 
     return Column(
       children: <Widget>[
