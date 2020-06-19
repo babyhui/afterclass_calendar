@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 class ClubDetail extends StatelessWidget {
   final ClubPost post;
   final ClubHttp clubHttp = ClubHttp();
+//  final Set<WordPair> _saved = new Set<WordPair>();
 
   ClubDetail({
     @required this.post,
