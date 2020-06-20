@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:http/http.dart' as http;
 
 class ActivityAdd extends StatelessWidget {
@@ -35,6 +36,7 @@ class ActivityAdd extends StatelessWidget {
             ),
             TextField(
               controller: _moneyController,
+              inputFormatters: [WhitelistingTextInputFormatter.digitsOnly],
               decoration: InputDecoration(
                   labelText: "入場費",
                   hintText: "活動費用",
