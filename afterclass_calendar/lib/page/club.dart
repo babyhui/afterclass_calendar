@@ -54,7 +54,7 @@ class Club extends StatelessWidget {
                       //    color: alreadySaved ? Colors.red : null,
                       // ),
                       trailing: new Icon(
-                        alreadySaved ? Icons.favorite : Icons.favorite_border,
+                        alreadySaved ? Icons.favorite_border : Icons.favorite,
                         color: alreadySaved ? Colors.red : null,
                       ),
                       // trailing: [
