@@ -7,10 +7,11 @@ import '../club_service/club_model.dart';
 final ClubHttp clubhttp = ClubHttp();
 
 class Club extends StatelessWidget {
+  
   @override
   Widget build(BuildContext context) {
     //    final bool alreadySaved = _saved.contains(pair);
-    bool alreadySaved = true;
+  //  bool alreadySaved = true;
     return Scaffold(
       appBar: AppBar(
         title: Text("社團"),
@@ -53,17 +54,24 @@ class Club extends StatelessWidget {
                       //    alreadySaved ? Icons.favorite : Icons.favorite_border,
                       //    color: alreadySaved ? Colors.red : null,
                       // ),
-                      trailing: new Icon(
-                        alreadySaved ? Icons.favorite_border : Icons.favorite,
-                        color: alreadySaved ? Colors.red : null,
-                      ),
-                      // trailing: [
+                      // trailing: new Icon(
+                      //   alreadySaved ? Icons.favorite_border : Icons.favorite,
+                      //   color: alreadySaved ? Colors.red : null,
+                      // ),
+                      // trailing: 
                       //   IconButton (
-                      //     icon: Icon(Icons.keyboard_arrow_right),
-                      //     onPressed: () {}
+                      //     icon: Icon(Icons.favorite_border),
+                      //     onPressed: () {
+                            
+                      //     }
 
                       //   ),
-                      // ]
+                      trailing: 
+                        IconButton (
+                          icon: Icon(Icons.favorite_border),
+                          onPressed:() {}
+
+                        ),
                       onTap: () => Navigator.of(context).push(MaterialPageRoute(
                           builder: (context) => ClubDetail(
                                 post: post,
@@ -79,4 +87,13 @@ class Club extends StatelessWidget {
       ),
     );
   }
+//   void _toggleFavorite() {
+// //  setState(() {
+//     if (alreadySaved) {
+//       alreadySaved = false;
+//     } else {
+//      alreadySaved = true;
+//     }
+//   );
+// }
 }

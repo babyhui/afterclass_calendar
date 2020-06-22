@@ -15,18 +15,8 @@ class ManageDetail extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("測試"),
-        actions: [
-          IconButton(
-            icon: Icon(Icons.favorite_border),
-            onPressed: () {
-              // showSearch(
-              // context: context,
-              //  delegate: ActivitySearch(),
-              // );
-            },
-          ),
-        ],
+        title: Text("琴韻吉他社"),
+        
       ),
       // floatingActionButton: FloatingActionButton(
       //   child: Icon(Icons.delete),
@@ -51,6 +41,7 @@ class ManageDetail extends StatelessWidget {
                   title: Text("測試"),
                 ),
                 RaisedButton(
+                  child: Text("新增活動"),
                   onPressed: () {
                     Navigator.of(context).push(
                         MaterialPageRoute(builder: (context) => ActivityAdd()));
