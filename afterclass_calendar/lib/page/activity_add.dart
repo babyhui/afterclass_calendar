@@ -13,7 +13,7 @@ class ActivityAdd extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('增加活動'),
+          title: Text('新增活動'),
         ),
         body: Column(
           children: <Widget>[
